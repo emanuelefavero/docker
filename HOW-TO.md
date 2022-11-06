@@ -19,6 +19,8 @@ CMD node app.js
 
 ## Build the image
 
+NOTE: _example of IMAGE-NAME is USERNAME/REPOSITORY-NAME_
+
 ```bash
 docker build -t IMAGE-NAME .
 ```
@@ -27,6 +29,12 @@ docker build -t IMAGE-NAME .
 
 ```bash
 docker run IMAGE-NAME
+```
+
+## List all images
+
+```bash
+docker images
 ```
 
 ## Login to docker hub
@@ -41,7 +49,7 @@ docker login
 docker push IMAGE-NAME
 ```
 
-## Add a tag to the image
+## Add a tag to the image (if needed), then push again
 
 ```bash
 docker tag IMAGE-NAME USERNAME/IMAGE-NAME
@@ -72,6 +80,8 @@ docker ps -a
 ```
 
 ## Start a container and interact with it
+
+EXAMPLE: _docker run -it ubuntu_
 
 ```bash
 docker run -it IMAGE-NAME
